@@ -1,0 +1,5 @@
+# Dropped off by Chef for <%= @node[:fqdn] %>
+127.0.0.1     localhost localhost.localdomain
+<% @host_entries.each do |entry| %>
+<%= entry %> 
+<% end %>
