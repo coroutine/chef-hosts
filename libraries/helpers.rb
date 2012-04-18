@@ -35,7 +35,6 @@ module Opscode
             end
           end
         end
-        Chef::Log.info "IP Addesses assigned to this host: #{ip_addresses.join ', '}"
         ip_addresses
       end
 
