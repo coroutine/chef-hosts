@@ -53,10 +53,10 @@ module Opscode
         private_ip = find_private_ip
 
         internal_ip = begin
-          if node.attribute?("cloud") && node.cloud.attribue?("local_ipv4")
+          if node.attribute?("cloud") && node.cloud.attribute?("local_ipv4")
             Chef::Log.info "node.cloud.local_ipv4: #{node.cloud.local_ipv4}"
-            node.cloud.local_ipv4
             Chef::Log.info "Using Cloud IP: #{node.cloud.local_ipv4}"
+            node.cloud.local_ipv4
           elsif private_ip
             Chef::Log.info "Using Private IP: #{private_ip}"
             private_ip
